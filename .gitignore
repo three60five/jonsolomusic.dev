@@ -3,9 +3,13 @@
 /archive
 
 # NODE MODULES
-#######################
+##############
 /node_modules
 
+
+# DEVELOPMENT CODE
+##################
+/development
 
 # Compiled source #
 ###################
