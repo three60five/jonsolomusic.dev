@@ -1,0 +1,68 @@
+* {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    body { font-family: sans-serif; }
+
+    .gallery {
+      background: black;
+      height: 100%;
+    }
+
+    .gallery-cell {
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headline {
+        font-size: 20vw; 
+        text-align: center;
+        color: pink;
+    }
+
+    .videos {
+        font-size: 15vw; 
+        text-align: center;
+        color: white;
+    }
+
+    .music {
+        font-size: 10vw; 
+        padding: 1rem;
+        background-color: red;
+        text-align: center;
+        color: black;
+    }
+
+    .contact {
+        font-size: 17vw; 
+        text-align: center;
+        color: yellow;
+    }
+
+    .intro {
+        color: pink;
+        font-size: 6vmax;
+        padding: 2em;
+        text-align: center;
+        color: pink;
+        font-weight: bold;
+    }
+
+    .flickity-page-dots {
+      bottom: 10px;
+    }
