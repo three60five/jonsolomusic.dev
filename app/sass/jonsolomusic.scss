@@ -9,9 +9,9 @@
     body {
       padding: 0;
       margin: 0;
+      font-family: 'Faster One', cursive;
+      // font-family: 'Pacifico', sans-serif;
     }
-
-    body { font-family: sans-serif; }
 
     .gallery {
       background: black;
@@ -23,46 +23,93 @@
         height: 100%;
         margin-right: 10px;
         background: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: scroll;
     }
 
-    .headline {
-        font-size: 20vw; 
-        text-align: center;
-        color: pink;
+    .embed-container { 
+        position: relative; 
+        padding-bottom: 56.25%; 
+        height: 0; 
+        overflow: scroll; 
+        max-width: 100%;
+    } 
+
+    .embed-container iframe {
+        position: absolute; 
+        top: 10%; 
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        border: 10px solid white;
+    }
+
+    .jonsolo {
+        display: flex;
+        border: 0.7em solid white;
+        background-image: url(../images/face_iphone.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgba(255,179,237,1);
+        &:before {
+            content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to bottom, white, purple);
+                opacity: 0.2; 
+          }
+    }
+
+    .jonsolo-text {
+        font-size: 15vmin;
+        z-index: 1000;
+        position: absolute;
+        top: 60px;
+        left: 0.4em;
+        transform : scale(1,2);
+        color: rgba(255,115,116,1);
+        text-shadow: 0.04em 0.03em 0px #feac7d;
+        line-height: 0.8;
     }
 
     .videos {
         font-size: 15vw; 
         text-align: center;
         color: white;
+        width: 100%;
     }
 
     .music {
-        font-size: 10vw; 
+        background-color: blue;
+
+    }
+
+    .music-header {
+        font-size: 10vw;
         padding: 1rem;
         background-color: red;
+        border-bottom: 0.25em solid white;
         text-align: center;
-        color: black;
+        color: white;
     }
 
     .contact {
         font-size: 17vw; 
         text-align: center;
-        color: yellow;
+        color: red;
     }
 
     .intro {
+        background-color: blue;
+    }
+
+    .intro-text {
         color: pink;
         font-size: 6vmax;
         padding: 2em;
         text-align: center;
-        color: pink;
-        font-weight: bold;
-    }
-
-    .flickity-page-dots {
-      bottom: 10px;
     }
