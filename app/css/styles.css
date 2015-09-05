@@ -10,38 +10,44 @@ body {
   font-family: 'Faster One', cursive; }
 
 .gallery {
-  background: black;
+  background: white;
   height: 100%; }
 
 .gallery-cell {
   width: 100%;
   height: 100%;
   margin-right: 10px;
-  background: black;
-  overflow: scroll; }
+  background: white;
+  overflow: scroll;
+  border: 0.7em solid white; }
 
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
-  height: 0;
-  overflow: scroll;
+  height: 0px;
+  overflow: hidden;
   max-width: 100%; }
 
 .embed-container iframe {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
   border: 10px solid white; }
 
+.video {
+  background-color: black; }
+
+.video-text {
+  font-size: 15vw;
+  margin-top: 0.3em;
+  text-align: center;
+  color: white;
+  width: 100%; }
+
 .jonsolo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 0.7em solid white;
-  background-image: url(../images/face_iphone.jpg);
+  background-image: url(../images/face_iso.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -71,12 +77,6 @@ body {
   text-shadow: 0.04em 0.03em 0px #feac7d;
   line-height: 0.8; }
 
-.videos {
-  font-size: 15vw;
-  text-align: center;
-  color: white;
-  width: 100%; }
-
 .music {
   background-color: blue; }
 
@@ -94,10 +94,26 @@ body {
   color: red; }
 
 .intro {
-  background-color: blue; }
+  border: 1em solid black;
+  background-image: -webkit-linear-gradient(45deg, #00a8c5, #ffff7e);
+  background-image: linear-gradient(45deg, #00a8c5, #ffff7e);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .intro-text {
-  color: pink;
-  font-size: 6vmax;
-  padding: 2em;
-  text-align: center; }
+  background-color: white;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 8vw;
+  padding: 1em;
+  mix-blend-mode: screen; }
