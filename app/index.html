@@ -4,36 +4,68 @@
     <meta charset="UTF-8">
     <title>Jon Solo</title>
     <link rel="stylesheet" href="css/flickity.min.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:300,700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <div class="gallery js-flickity" data-flickity-options='{ "setGallerySize": false, "wrapAround":true, "pageDots": false, "prevNextButtons": false }'>
+
+    <div class="gallery js-flickity" data-flickity-options='{ "cellSelector": ".gallery-cell", "setGallerySize": false, "setGallerySize": false, "wrapAround":true, "pageDots": false, "prevNextButtons": false }'>
+        <div class="swipe"><span class="swipe-indicator">&laquo;&nbsp;&nbsp;&laquo;&nbsp;&nbsp;Swipe&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&raquo;</span></div>
         <div class="gallery-cell jonsolo">
-            <div class="jonsolo-text">Jon Solo</div>
-            <div class="special-links"></div>
+            <div class="band">
+                <div class="jonsolo-text">Jon&nbsp;Solo</div>
+<!--                 <div class="musician-text">Musician</div>
+ --><!--                 <div class="bio">
+                    <div class="bio-items">
+                        <div>Musician</div>
+                        <div>Songwriter</div>
+                        <div>Producer</div>
+                    </div>
+                </div> -->
+                <div class="static-banner">
+                    <ul class="special-links">
+    <!--                <li><a href="http://instagram.com/solokeys">Wikipedia</a></li>  -->
+                        <li><a href="https://twitter.com/jonsolomusic">Twitter</a></li>
+                        <li><a href="https://instagram.com/solokeys">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/jonsolomusic">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
         <div class="gallery-cell intro">
-            <div class="intro-text">I've been<br />lucky to<br />play music<br />with friends<br />from all over<br />the world.</div>
+            <div class="intro-text">
+                <ul class="instruments">
+                    <li>Piano</li>
+                    <li>Rhodes</li>
+                    <li>B3&nbsp;Organ</li>
+                    <li>Analog&nbsp;Synths</li>
+                    <li>Guitar</li>
+                </ul>
+            </div>
         </div>
         <div class="gallery-cell video">
-            <div class="video-text">Videos</div>
+            <div class="video-text">Recent&nbsp;Bands</div>
             <div class "video-grid">
-                <div class="embed-container">
-                    <iframe src="https://www.youtube.com/embed/wQhiEKmduug?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="embed-container">
-                    <iframe src="https://www.youtube.com/embed/rFOrSwCek5M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="embed-container">
-                    <iframe src="https://www.youtube.com/embed/YOswe_JW02o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="embed-container">
-                    <iframe src="https://www.youtube.com/embed/xJv1IN_VpVY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <div class="gallery2 js-flickity" data-flickity-options='{ "cellSelector": ".gallery2-cell", "draggable": false, "wrapAround":true, "pageDots": false, "prevNextButtons": true }'>
+                    <div class="gallery2-cell">
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/wQhiEKmduug?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="gallery2-cell">
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/rFOrSwCek5M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="gallery2-cell">
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/YOswe_JW02o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
