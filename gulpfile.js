@@ -42,7 +42,7 @@ gulp.task('sass-compile', function(cb) {
 gulp.task('sass', ['sass-compile', 'sass-watch']);
 
 gulp.task('flickity-js', function() {
-  return gulp.src('node_modules/flickity/dist/flickity.pk.min.js')
+  return gulp.src('node_modules/flickity/dist/flickity.pkgd.min.js')
     .pipe(gulp.dest('app/js')) // Outputs it in the css folder
     .pipe(gulp.dest('dist/js')) // Outputs it in the css folder
 })
