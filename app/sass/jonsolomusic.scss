@@ -71,7 +71,6 @@ body {
 .gallery {
   background: white;
   height: 100%;
-
 }
 
  .gallery-cell {
@@ -98,6 +97,8 @@ body {
         content: 'flickity';
         display: none;
     }
+
+
 
 // HOME
 
@@ -133,28 +134,13 @@ body {
     text-align: right;
 }
 
-// .bio-items div {
-//     background-color: rgba(255,255,255,1);
-//     color: black;
-//     display: inline-block;
-//     text-transform: uppercase;
-//     font-size: 2.1vmin;
-//     font-family: 'Nunito', sans-serif;
-//     font-weight: bold;
-//     padding: 0.3em 0.6em;
-// }
-
 .bio-items div {
     background-color: rgba(0,0,0,0.5);
     color: white;
-    // text-shadow: 0.04em 0.03em 0.02em black;
-    // border-top: 1px solid white;
-    // color: white;
     display: inline-block;
     text-transform: uppercase;
     font-size: 1.5vmin;
     font-family: 'Nunito', sans-serif;
-    // font-weight: bold;
     padding: 0.1em 0.8em;
     margin:0;
 }
@@ -166,29 +152,15 @@ body {
         display: inline;
         a {
             text-decoration: none;
-            // border-radius: 5px;
             padding: 0em 0 0em 0.3em;
-            // margin-bottom: 1em;
             text-align: right;
-            // display: block;
-            // width: 10em;
-            // border: 1px solid white;
             color: white;
             text-shadow: 0.05em 0.05em 0.025em black; 
-            // letter-spacing: 0.2em;
-            // background-color: rgba(73,187,168,0.1);
-            // background-image: linear-gradient(-135deg, #47565f 10%, #f7ec86 50%);
-            // box-shadow: 0.1em 0.1em 0.2em #242424;
         }
     }
 }
 
-
-
-
 @media all and (orientation:portrait) {
-
-
 
     /* disable Flickity for large devices */
     .gallery2:after {
@@ -244,7 +216,6 @@ body {
         height: 25em;
     }
 
-
     .band {
         margin: 2% 3% 0% 0%;
     }
@@ -287,7 +258,6 @@ body {
 
 
     
-
     .embed-container { 
         display: block;
     } 
@@ -297,15 +267,6 @@ body {
         left: 25%;
         width: 50%;
         border: 10px solid white;
-    }
-
-    .video-grid {
-        // height: 100%;
-        // border: 1px solid red;
-        // height: 400px;
-        // position: relative;
-        // top: 50%;
-        // transform: translateY(-50%);
     }
 
     .video {
@@ -398,3 +359,34 @@ body {
         position: relative;
         list-style-type: none;
     }
+
+
+//ANimations
+.vhs-left {
+  opacity: 0;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.vhs-left {
+  -webkit-animation-name: vhs-left;
+          animation-name: vhs-left;
+  -webkit-transform: translateX(-12.5vw);
+      -ms-transform: translateX(-12.5vw);
+          transform: translateX(-12.5vw);
+
+}
+
+@-webkit-keyframes vhs-left {
+   0% { -webkit-transform: translateX(-12.5vw); transform: translateX(-12.5vw); opacity: 0; }
+ 100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
+}
+
+.vhs-delay-6 { -webkit-animation-delay: 2s; animation-delay: 2s }
+.vhs-duration-6 { -webkit-animation-duration: 2s; animation-duration: 2s  }
+
+
+
+
