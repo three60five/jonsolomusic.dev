@@ -103,7 +103,7 @@ body {
 // HOME
 
 .jonsolo {
-    background-image: url(../images/spotlight.jpg);
+    background-image: url(../images/spotlight_small.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -159,101 +159,6 @@ body {
         }
     }
 }
-
-@media all and (orientation:portrait) {
-
-    /* disable Flickity for large devices */
-    .gallery2:after {
-        content: '';
-    }
-
-    .gallery2 .gallery2-cell {
-        min-height: 20em;
-        max-height: 26em;
-    }
-
-    .band {
-        margin: 25% 3% 0 3%;
-    }
-
-    .jonsolo-text {
-        font-size: 16vmin;
-    }
-
-    .bio-items div {
-        font-size: 2.85vmin;
-    }
-
-    .special-links {
-        // padding-top: 0em;
-        position: relative;
-        float: right;
-        li a {
-            font-size: 7.2em;
-
-        }
-    }
-
-    .instruments {
-        font-size: 12vmin;
-    }
-
-    .swipe {
-        bottom: 10%;
-        font-size: 3em;
-    }
-
-    .embed-container iframe {
-        height: 20%;
-    }
-
-
-}
-@media all and (orientation:landscape) {
-// @media (min-width: 48em) {
-    /* Styles for Landscape screen */
-    .gallery2 .gallery2-cell {
-        height: 25em;
-    }
-
-    .band {
-        margin: 2% 3% 0% 0%;
-    }
-
-    .jonsolo-text {
-        font-size: 8em;
-    }
-
-    .bio-items div {
-        font-size: 1.4em;
-    }
-
-    .special-links {
-        padding-top:1em;
-        position: relative;
-        float: right;
-        li a {
-            font-size: 5em;
-
-        }
-    }
-
-    .embed-container iframe {
-        top: 5%; 
-        height: 90%;
-    }
-
-    .instruments {
-        font-size: 4em;
-    }
-
-    .swipe {
-        bottom: 8%;
-        font-size: 1.5em;
-    }
-
-}
-
 
 
 
@@ -335,7 +240,7 @@ body {
     .intro-text {
         height: 100%;
         width: 100%;
-        background-image: url(../images/keys.jpg);
+        background-image: url(../images/keys_small.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -359,6 +264,116 @@ body {
         position: relative;
         list-style-type: none;
     }
+
+
+
+
+
+@media all and (orientation:portrait) {
+
+    /* disable Flickity for large devices */
+    .gallery2:after {
+        content: '';
+    }
+
+    .gallery2 .gallery2-cell {
+        min-height: 20em;
+        max-height: 26em;
+    }
+
+    .band {
+        margin: 25% 3% 0 3%;
+    }
+
+    .jonsolo-text {
+        font-size: 16vmin;
+    }
+
+    .bio-items div {
+        font-size: 2.85vmin;
+    }
+
+    .special-links {
+        // padding-top: 0em;
+        position: relative;
+        float: right;
+        li a {
+            font-size: 7.2em;
+
+        }
+    }
+
+    .instruments {
+        font-size: 12vmin;
+    }
+
+    .swipe {
+        bottom: 10%;
+        font-size: 3em;
+    }
+
+    .embed-container iframe {
+        height: 20%;
+    }
+
+
+}
+@media all and (orientation:landscape) {
+// @media (min-width: 48em) {
+    /* Styles for Landscape screen */
+    .jonsolo {
+        background-image: url(../images/spotlight_medium.jpg);
+    }
+
+    .intro-text {
+        background-image: url(../images/keys_medium.jpg);
+    }
+
+
+    .gallery2 .gallery2-cell {
+        height: 25em;
+    }
+
+    .band {
+        margin: 2% 3% 0% 0%;
+    }
+
+    .jonsolo-text {
+        font-size: 8em;
+    }
+
+    .bio-items div {
+        font-size: 1.4em;
+    }
+
+    .special-links {
+        padding-top:1em;
+        position: relative;
+        float: right;
+        li a {
+            font-size: 5em;
+
+        }
+    }
+
+    .embed-container iframe {
+        top: 5%; 
+        height: 90%;
+    }
+
+    .instruments {
+        font-size: 4em;
+    }
+
+    .swipe {
+        bottom: 8%;
+        font-size: 1.5em;
+    }
+
+}
+
+
+
 
 
 //ANimations
