@@ -98,6 +98,23 @@ body {
         display: none;
     }
 
+    .gallery3 {
+    background: transparent;
+    height: 50%;
+    .gallery3-cell {
+        width: 100%;
+        background: transparent;
+        border: none;
+    }
+}
+
+    /* Styles for Portrait screen */
+    .gallery3:after {
+        content: 'flickity';
+        display: none;
+    }
+
+
 
 
 // HOME
@@ -167,10 +184,18 @@ body {
         display: block;
     } 
 
-    .embed-container iframe {
+    .embed-container .videoframe {
         position: absolute; 
         left: 25%;
         width: 50%;
+        border: 10px solid white;
+    }
+
+    .embed-container .musicframe {
+        display: block;
+        margin: 2em auto;
+        width: 350px;
+        height: 350px;
         border: 10px solid white;
     }
 
@@ -194,6 +219,8 @@ body {
         margin-bottom: 4%;
         width: 100%;
     }
+
+
 
 
     .flickity-prev-next-button {
@@ -220,9 +247,10 @@ body {
 
     }
 
-    .music-header {
-        font-size: 10vw;
-        padding: 1rem;
+    .music-text {
+        margin-bottom: 0.5em;
+        font-size: 3vw;
+        padding: 0.5rem;
         background-color: #0074D9;
         text-align: center;
         color: #DDDDDD;
@@ -281,12 +309,26 @@ body {
         max-height: 26em;
     }
 
+    /* disable Flickity for large devices */
+    .gallery3:after {
+        content: '';
+    }
+
+    .gallery3 .gallery3-cell {
+        min-height: 20em;
+        max-height: 26em;
+    }
+
     .band {
         margin: 25% 3% 0 3%;
     }
 
     .jonsolo-text {
         font-size: 16vmin;
+    }
+
+    .music-text {
+        font-size: 8vw;
     }
 
     .bio-items div {
@@ -334,6 +376,10 @@ body {
         height: 25em;
     }
 
+    .gallery3 .gallery3-cell {
+        height: 25em;
+    }
+
     .band {
         margin: 2% 3% 0% 0%;
     }
@@ -371,10 +417,6 @@ body {
     }
 
 }
-
-
-
-
 
 //ANimations
 .vhs-left {

@@ -33,9 +33,7 @@ gulp.task('sass-compile', function(cb) {
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('dist/css')) // Outputs it in the css folder
     .pipe(browserSync.stream())
-    // .pipe(browserSync.reload({ // Reloading with Browser Sync
-    //   stream: true
-    // }));
+ 
     cb(err);
 })
 
