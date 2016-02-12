@@ -37,10 +37,10 @@ a.symbol:before:nth-last-child(1) {
     margin-right: 0em;
 }
 
-.flip {
-    transform: rotate(180deg);
-    display: inline-block;
-    }
+
+#audio button { height:64px; width:64px; margin:0.5em; vertical-align:middle; background:url(../images/play.png) 50% no-repeat; border:0; cursor:pointer; }
+#audio button.pause { background-image:url(../images/pause.png) }
+
 
 
 .swipe {
@@ -128,12 +128,14 @@ body {
 // HOME
 
 .jonsolo {
-    background-image: url(../images/spotlight_small.jpg);
+    height: 100%;
+    width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgba(255,179,237,1);
+    background-image: url(../images/spotlight_small.jpg);
+    background-color: rgba(0,0,0,1);
     &:before {
         content: '';
             position: absolute;
@@ -144,6 +146,7 @@ body {
             background-image: linear-gradient(-135deg,  #47565f 0%, #5b625a 15%, #947461 38%, #f98056 70%, #f7ec86 100%);
             opacity: 0.6; 
       }
+
 }
 
 .jonsolo-text {
@@ -235,11 +238,6 @@ body {
     .flickity-prev-next-button.previous {
         left: 7%;
     }
-
-    // .flickity-page-dots {
-    //     height: 50px;
-    // }
-
 
 
     .music {
@@ -370,7 +368,7 @@ body {
     }
 
     .instrument-list {
-        font-size: 12vmin;
+        font-size: 11vmin;
     }
 
     .swipe {

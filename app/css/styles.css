@@ -27,11 +27,17 @@ a.symbol:before {
 a.symbol:before:nth-last-child(1) {
   margin-right: 0em; }
 
-.flip {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  display: inline-block; }
+#audio button {
+  height: 64px;
+  width: 64px;
+  margin: 0.5em;
+  vertical-align: middle;
+  background: url(../images/play.png) 50% no-repeat;
+  border: 0;
+  cursor: pointer; }
+
+#audio button.pause {
+  background-image: url(../images/pause.png); }
 
 .swipe {
   text-align: center;
@@ -97,12 +103,14 @@ body {
   display: none; }
 
 .jonsolo {
-  background-image: url(../images/spotlight_small.jpg);
+  height: 100%;
+  width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #ffb3ed; }
+  background-image: url(../images/spotlight_small.jpg);
+  background-color: black; }
   .jonsolo:before {
     content: '';
     position: absolute;
@@ -276,7 +284,7 @@ body {
     .special-links li a {
       font-size: 6.6em; }
   .instrument-list {
-    font-size: 12vmin; }
+    font-size: 11vmin; }
   .swipe {
     bottom: 10%;
     font-size: 3em; }

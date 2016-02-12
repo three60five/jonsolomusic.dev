@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Jon Solo</title>
     <meta name="description" content="Jon Solo is a Brooklyn-based musician.  Follow him on Instagram, Twitter, and Facebook.">
-    <meta name="keywords" content="Jon Solo, Jon Solo Music, solokeys, singer-songwriter, brooklyn, musician, songwriter, brett dennen, angus and julia stone, angus stone" />
+    <meta name="keywords" content="Jon Solo, Jon Solo Music, solokeys, singer-songwriter, brooklyn, musician, bands, instruments, songwriter, angus and julia stone, angus stone, brett dennen" />
 
     <link href="css/flickity.min.css" rel="stylesheet" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Nunito:300,700,400' rel='stylesheet' type='text/css'>
@@ -21,11 +21,11 @@
                 <div class="jonsolo-text">Jon&nbsp;Solo</div>
                 <div class="static-banner">
                     <ul class="special-links">
-                        <li><a class="symbol" title="circletwitterbird" href="https://twitter.com/jonsolomusic"></a></li>
-                        <li><a class="symbol" title="circleinstagram"  href="https://instagram.com/solokeys"></a></li>
-                        <li><a class="symbol" title="circlefacebook"  href="https://www.facebook.com/jonsolomusic"></a></li>
-                        <li><a class="symbol" title="circleitunes"  href="https://jonsolo.bandcamp.com"></a></li>
-                        <li><a class="symbol" title="circleemail"  href="mailto:solokeys@gmail.com"></a></li>
+                        <li><a class="symbol" title="circletwitterbird"  href="https://twitter.com/jonsolomusic"></a></li>
+                        <li><a class="symbol" title="circleinstagram" href="https://instagram.com/solokeys"></a></li>
+                        <li><a class="symbol" title="circlefacebook" href="https://www.facebook.com/jonsolomusic"></a></li>
+                        <li><a class="symbol" title="circleitunes" href="https://jonsolo.bandcamp.com"></a></li>
+                        <li><a class="symbol" title="circleemail" href="mailto:solokeys@gmail.com"></a></li>
                     </ul>
                 </div>
             </div>
@@ -34,21 +34,35 @@
             <div class="instrument">
                 <div class="instrument-text">Instruments</div>
                 <div class="static-banner">
-
-                    <ul class="instrument-list">
-                        <li>Piano</a></li>
-                        <li>Rhodes</a></li>
-                        <li>B3&nbsp;Organ</li>
-                        <li>Analog&nbsp;Synths</li>
-                        <li>Wurlitzer</li>
-                        <li>Guitar</li>
-
-<!--                         <li><a href="#">Piano</a></li>
-                        <li><a href="#">Rhodes</a></li>
-                        <li><a href="#">B3&nbsp;Organ</a></li>
-                        <li><a href="#">Analog&nbsp;Synths</a></li>
-                        <li><a href="#">Guitar</a></li> -->
-                    </ul>
+                    <div id="audio">
+                        <ul class="instrument-list">
+                            <li>Piano&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="auto">
+                                    <source src="instruments/Piano.mp3" type="audio/mpeg" />
+                                </audio>
+                            </li>
+                            <li>Rhodes&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="none">
+                                    <source src="instruments/Rhodes.mp3" type="audio/mpeg" />
+                                </audio></li>
+                            <li>B3&nbsp;Organ&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="none">
+                                    <source src="instruments/HammondB3.mp3" type="audio/mpeg" />
+                                </audio></li>
+                            <li>Analog&nbsp;Synths&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="none">
+                                    <source src="instruments/AnalogSynths.mp3" type="audio/mpeg" />
+                                </audio></li>
+                            <li>Wurlitzer&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="none">
+                                    <source src="instruments/Wurlitzer.mp3" type="audio/mpeg" />
+                                </audio></li>
+                            <li>Guitar&nbsp;<button title="Play / Pause"></button>
+                                <audio preload="none">
+                                    <source src="instruments/Guitar.mp3" type="audio/mpeg" />
+                                </audio></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,13 +107,6 @@
                             </iframe>
                         </div>
                     </div>
-                    <!-- <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="http://bandcamp.com/EmbeddedPlayer/album=3154585174/size=large/bgcol=ffffff/linkcol=11219d/track=1235340039/minimal=true/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/decade">Decade by Jon Solo</a>
-                            </iframe>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -120,6 +127,23 @@
             },1000);
           });
         });
+
+
+        var ctrl = document.getElementById('audio').getElementsByTagName('button');
+        for(var i = 0; i < ctrl.length; i++){
+          ctrl[i].addEventListener('click', function(){
+            var audio = this.nextElementSibling;
+            var pause = this.className === 'pause';
+            this.className = pause ? '' : 'pause';
+            var method = pause ? 'pause' : 'play';
+            audio[method]();
+            audio.addEventListener('ended', function(){
+                this.previousElementSibling.className = '';
+                }, false);
+            }, false);
+    }
+
+
     </script>
 </body>
 
