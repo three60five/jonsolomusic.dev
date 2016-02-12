@@ -106,10 +106,10 @@
           flkty.on( 'dragEnd', function() {
             var swipeClass = document.querySelector('.swipe').classList;
             swipeClass.remove('vhs-left', 'vhs-delay-6', 'vhs-duration-6');
-            swipeClass.add('vhs-right', 'vhs-reverse', 'vhs-duration-6');
+            swipeClass.add('vhs-right', 'vhs-reverse');
             setTimeout(function() {
                 swipeClass.add('swipe-off');
-            },2000);
+            },1000);
           });
         });
     </script>
