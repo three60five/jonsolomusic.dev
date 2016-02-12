@@ -6,6 +6,8 @@ html, body {
     height: 100%;
 }
 
+html { -webkit-font-smoothing: antialiased; } 
+
 // ICON FONT
 @font-face {
     font-family: 'Mono Social Icons Font';
@@ -68,7 +70,7 @@ a.symbol:before:nth-last-child(1) {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Permanent Marker', cursive;
 }
 
 // Flickity
@@ -89,7 +91,7 @@ body {
 .gallery2 {
     background: transparent;
     height: 50%;
-    margin-top: 2em;
+    // margin-top: 2em;
     .gallery2-cell {
         width: 100%;
         background: transparent;
@@ -106,7 +108,7 @@ body {
     .gallery3 {
         background: transparent;
         height: 50%;
-        margin-top: 2em;
+        // margin-top: 2em;
         .gallery3-cell {
             width: 100%;
             background: transparent;
@@ -148,7 +150,7 @@ body {
     position: relative;
     text-align: right;
     color: rgba(255,255,255,1);
-    text-shadow: 0.04em 0.03em 0.02em black; 
+    // text-shadow: 0.04em 0.03em 0.02em black; 
     line-height: 1;
 }
 
@@ -178,7 +180,7 @@ body {
             padding: 0em 0 0em 0.3em;
             text-align: right;
             color: white;
-            text-shadow: 0.05em 0.05em 0.025em black; 
+            // text-shadow: 0.05em 0.05em 0.025em black; 
         }
     }
 }
@@ -192,8 +194,8 @@ body {
 
     .embed-container .videoframe {
         display: block;
-        margin: 2em auto;
-        margin-top: 4em;
+        margin: 0% auto 4% auto;
+        // margin-top: 4em;
         width: 512px;
         height: 288px;
         border: 10px solid white;
@@ -201,8 +203,7 @@ body {
 
     .embed-container .musicframe {
         display: block;
-        margin: 2em auto;
-        margin-bottom: 4em;
+        margin: 0% auto 4% auto;
         width: 350px;
         height: 350px;
         border: 10px solid white;
@@ -216,7 +217,7 @@ body {
 
     .video-text {
         font-size: 3vw;
-        padding-top: 1rem;
+        padding: 0.5rem 0 0.5rem 0;
         text-align: center;
         color: #ffffff;
     }
@@ -235,15 +236,11 @@ body {
         left: 7%;
     }
 
-    .flickity-page-dots {
-        top: 0px;
-        height: 50px;
-    }
+    // .flickity-page-dots {
+    //     height: 50px;
+    // }
 
-    .gallery2 .flickity-page-dots {
-        top: 25px;
-        height: 50px;
-    }
+
 
     .music {
         height: 100%;
@@ -252,9 +249,8 @@ body {
     }
 
     .music-text {
-        font-size: 2vw;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        font-size: 3vw;
+        padding: 0.5rem 0 0.5rem 0;
         text-align: center;
         color: #ffffff;;
     }
@@ -286,12 +282,13 @@ body {
         float: left;
         font-size: 5vw;
         text-align: left;
-        text-shadow: 0.05em 0.05em 0.01em #ffffff;
+        // text-shadow: 0.05em 0.05em 0.01em #ffffff;
         color: #2364b4;
         position: relative;
     }
 
     .instrument {
+
         height: 100%;
         width: 100%;
         &:before {
@@ -333,20 +330,20 @@ body {
         content: '';
     }
 
-    .gallery2 .gallery2-cell {
-        min-height: 20em;
-        // max-height: 28em;
-    }
+    // .gallery2 .gallery2-cell {
+    //     min-height: 20em;
+    //     max-height: 28em;
+    // }
 
     /* disable Flickity for large devices */
     .gallery3:after {
         content: '';
     }
 
-    .gallery3 .gallery3-cell {
-        min-height: 20em;
-        // max-height: 28em;
-    }
+    // .gallery3 .gallery3-cell {
+    //     min-height: 20em;
+    //     max-height: 28em;
+    // }
 
     .band {
         margin: 25% 3% 0 3%;
@@ -368,7 +365,7 @@ body {
         position: relative;
         float: right;
         li a {
-            font-size: 7.2em;
+            font-size: 6.6em;
         }
     }
 
@@ -382,8 +379,8 @@ body {
     }
 
     .embed-container .musicframe {
-        width: 550px;
-        height: 550px;
+        width: 500px;
+        height: 500px;
     }
 
     .embed-container .videoframe {
@@ -435,11 +432,11 @@ body {
     }
 
     .instrument-text {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .instrument-list {
-        font-size: 4em;
+        font-size: 5vw;
     }
 
     .swipe {
@@ -447,9 +444,12 @@ body {
         font-size: 1.5em;
     }
 
-    .gallery2, .gallery3 {
-        margin-top: 0em;
+    .gallery2 .embed-container {
+        margin-top: 4rem;
+    }
 
+    .gallery3 .embed-container{
+        margin-top: 2rem;
     }
 }
 
