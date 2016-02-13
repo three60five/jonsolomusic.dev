@@ -37,7 +37,8 @@ a.symbol:before:nth-last-child(1) {
   cursor: pointer; }
 
 #audio button.pause {
-  background-image: url(../images/pause.png); }
+  background-image: url(../images/pause.png); 
+}
 
 .swipe {
   text-align: center;
@@ -178,7 +179,9 @@ body {
 
 .video-text {
   font-size: 3vw;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0;
+  margin-top: 5rem;
+  margin-bottom: -3rem;
   text-align: center;
   color: #ffffff; }
 
@@ -201,7 +204,9 @@ body {
 
 .music-text {
   font-size: 3vw;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: -1.5rem;
   text-align: center;
   color: #ffffff; }
 
@@ -275,7 +280,10 @@ body {
   .jonsolo-text {
     font-size: 16vmin; }
   .music-text, .video-text {
-    font-size: 5vw; }
+    font-size: 5vw;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
   .bio-items div {
     font-size: 2.85vmin; }
   .special-links {
@@ -286,7 +294,7 @@ body {
   .instrument-list {
     font-size: 11vmin; }
   .swipe {
-    bottom: 30%;
+    bottom: 10%;
     font-size: 3em; }
   .embed-container .musicframe {
     width: 500px;
@@ -306,28 +314,38 @@ body {
   .gallery3 .gallery3-cell {
     height: 25em; }
   .band {
-    margin: 5% 3% 0% 0%; }
+    margin: 8% 3% 0% 0%; }
   .jonsolo-text {
     font-size: 8em; }
   .bio-items div {
     font-size: 1.4em; }
   .special-links {
-    padding-top: 1em;
+    padding-top: 0em;
     position: relative;
     float: right; }
     .special-links li a {
       font-size: 5em; }
   .instrument-text {
-    font-size: 1.5em; }
+    font-size: 1.3em; }
   .instrument-list {
     font-size: 5vw; }
   .swipe {
-    bottom: 20%;
+    bottom: 15%;
     font-size: 1.5em; }
   .gallery2 .embed-container {
     margin-top: 4rem; }
   .gallery3 .embed-container {
-    margin-top: 2rem; } }
+    margin-top: 2rem; } 
+
+  .gallery2 .flickity-page-dots {
+    bottom: 5px;
+  }
+
+  .gallery3 .flickity-page-dots {
+    bottom: -20px;
+  }
+
+}
 
 .vhs-left, .vhs-right {
   opacity: 0;
