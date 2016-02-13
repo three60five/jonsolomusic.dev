@@ -286,7 +286,7 @@ body {
   .instrument-list {
     font-size: 11vmin; }
   .swipe {
-    bottom: 10%;
+    bottom: 30%;
     font-size: 3em; }
   .embed-container .musicframe {
     width: 500px;
@@ -306,7 +306,7 @@ body {
   .gallery3 .gallery3-cell {
     height: 25em; }
   .band {
-    margin: 2% 3% 0% 0%; }
+    margin: 5% 3% 0% 0%; }
   .jonsolo-text {
     font-size: 8em; }
   .bio-items div {
@@ -322,7 +322,7 @@ body {
   .instrument-list {
     font-size: 5vw; }
   .swipe {
-    bottom: 8%;
+    bottom: 20%;
     font-size: 1.5em; }
   .gallery2 .embed-container {
     margin-top: 4rem; }
