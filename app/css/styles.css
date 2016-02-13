@@ -5,7 +5,7 @@ html, body {
   height: 100%; }
 
 html {
-  font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased; }
 
 @font-face {
   font-family: 'Mono Social Icons Font';
