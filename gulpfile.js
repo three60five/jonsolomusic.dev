@@ -31,9 +31,9 @@ gulp.task('sass-compile', function(cb) {
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(minifyCSS()) // minify css
     .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(gulp.dest('dist/css')) // Outputs it in the css folder
     .pipe(browserSync.stream())
- 
     cb(err);
 })
 
