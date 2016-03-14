@@ -70,7 +70,7 @@ a.symbol:before:nth-last-child(1) {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', sans-serif;
 }
 
 // Flickity
@@ -447,7 +447,7 @@ body {
 .vhs-left {
   -webkit-animation-name: vhs-left;
           animation-name: vhs-left;
-  -webkit-transform: translateX(-12.5vw);
+  -webkit-transform: translateX(-12.5vw); 
       -ms-transform: translateX(-12.5vw);
           transform: translateX(-12.5vw);
 }
