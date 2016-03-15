@@ -1,4 +1,6 @@
+
 @import url(https://fonts.googleapis.com/css?family=Nunito|Permanent+Marker);
+
 
 * {
     box-sizing: border-box;
@@ -105,22 +107,6 @@ body {
         display: none;
     }
 
-    .gallery3 {
-        background: transparent;
-        height: 50%;
-        // margin-top: 2em;
-        .gallery3-cell {
-            width: 100%;
-            background: transparent;
-            border: none;
-        }
-    }
-
-    /* Styles for Portrait screen */
-    .gallery3:after {
-        content: 'flickity';
-        display: none;
-    }
 
 
 
@@ -172,13 +158,6 @@ body {
     }
 }
 
-
-
-    
-    .embed-container { 
-        display: block;
-    } 
-
     .embed-container .videoframe {
         display: block;
         margin: 0% auto 4% auto;
@@ -188,13 +167,7 @@ body {
         border: 10px solid white;
     }
 
-    .embed-container .musicframe {
-        display: block;
-        margin: 0% auto 4% auto;
-        width: 350px;
-        height: 350px;
-        border: 10px solid white;
-    }
+
 
     .video {
         background: linear-gradient(135deg, #6f749e 0%, #9a8daf 31%, #d0a8b9 58%, #f8bbb1 80%, #fde6b1 100%);
@@ -224,18 +197,7 @@ body {
     }
 
 
-    .music {
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(135deg, #11219d 0%, #59d7dd 100%);
-    }
 
-    .music-text {
-        font-size: 3vw;
-        padding: 0;
-        text-align: center;
-        color: #ffffff;;
-    }
 
     .intro {
         height: 100%;
@@ -312,10 +274,6 @@ body {
         content: '';
     }
 
-    /* disable Flickity for large devices */
-    .gallery3:after {
-        content: '';
-    }
 
     .band {
         margin: 25% 3% 0 3%;
@@ -325,7 +283,7 @@ body {
         font-size: 16vmin;
     }
 
-    .music-text, .video-text {
+    .video-text {
         font-size: 5vw;
     }
 
@@ -346,10 +304,7 @@ body {
         font-size: 3em;
     }
 
-    .embed-container .musicframe {
-        width: 325px;
-        height: 325px;
-    }
+
 
     .embed-container .videoframe {
         width: 560px;
@@ -373,9 +328,7 @@ body {
         height: 25em;
     }
 
-    .gallery3 .gallery3-cell {
-        height: 25em;
-    }
+
 
     .band {
         margin: 8% 3% 0% 0%;
@@ -385,10 +338,7 @@ body {
         font-size: 8em;
     }
 
-    .music-text {
-        margin-top: 3rem;
-        margin-bottom: -1.5rem;
-    }
+
 
     .video-text {
         margin-top: 4rem;
@@ -421,68 +371,18 @@ body {
         margin-top: 4rem;
     }
 
-    .gallery3 .embed-container{
-        margin-top: 2rem;
-    }
+
 
     .gallery2 .flickity-page-dots {
     bottom: 5px;
   }
 
-  .gallery3 .flickity-page-dots {
-    bottom: -20px;
-  }
+
 
 }
+@import 'songwriting';
+@import 'animations';
 
-//ANimations
-.vhs-left, .vhs-right {
-  opacity: 0;
-  -webkit-animation-duration: .6s;
-          animation-duration: .6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.vhs-left {
-  -webkit-animation-name: vhs-left;
-          animation-name: vhs-left;
-  -webkit-transform: translateX(-12.5vw); 
-      -ms-transform: translateX(-12.5vw);
-          transform: translateX(-12.5vw);
-}
-.vhs-right {
-  -webkit-animation-name: vhs-right;
-          animation-name: vhs-right;
-  -webkit-transform: translateX(12.5vw);
-      -ms-transform: translateX(12.5vw);
-          transform: translateX(12.5vw);
-}
-
-@-webkit-keyframes vhs-left {
-   0% { -webkit-transform: translateX(-12.5vw); transform: translateX(-12.5vw); opacity: 0; }
- 100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
-}
-
-@keyframes vhs-left {
-   0% { -webkit-transform: translateX(-12.5vw); transform: translateX(-12.5vw); opacity: 0; }
- 100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
-}
-
-@-webkit-keyframes vhs-right {
-   0% { -webkit-transform: translateX(12.5vw); transform: translateX(12.5vw); opacity: 0; }
- 100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
-}
-
-@keyframes vhs-right {
-   0% { -webkit-transform: translateX(12.5vw); transform: translateX(12.5vw); opacity: 0; }
- 100% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
-}
-
-.vhs-reverse { -webkit-animation-direction: reverse; animation-direction: reverse }
-
-.vhs-delay-6 { -webkit-animation-delay: 2s; animation-delay: 2s }
-.vhs-duration-6 { -webkit-animation-duration: 2s; animation-duration: 2s  }
 
 
 

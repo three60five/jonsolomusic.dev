@@ -1,0 +1,87 @@
+// .gallery3 {
+//     background: transparent;
+// }
+
+.gallery3-cell {
+    display: flex;
+    height: 33.3%;
+    justify-content: center;
+    // align-items: center;
+    // background: transparent;
+    // border: none;
+}
+
+/* Styles for Portrait screen */
+.gallery3:after {
+    content: 'flickity';
+    display: none;
+}
+
+.gallery3 .embed-container {
+    // display: flex;
+    // justify-content: center;
+}
+
+.embed-container .musicframe {
+    width: 25vh;
+    height: 25vh;
+    border: 10px solid white;
+}
+
+.music {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #11219d 0%, #59d7dd 100%);
+}
+
+.music-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    height: 8%;
+    color: #ffffff;;
+}
+
+
+@media all and (orientation:portrait) {
+/* disable Flickity for large devices */
+
+    .gallery3:after {
+        content: '';
+    }
+
+    .music-grid {
+        padding-bottom: 5%;
+        height: 92%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .music-text {
+        font-size: 3vh;
+    }
+}
+
+@media all and (orientation:landscape) {
+/* Styles for Landscape screen */
+
+    .gallery3 .gallery3-cell {
+        height: 25em;
+    }
+
+    .music-text {
+        margin-top: 3rem;
+        margin-bottom: -1.5rem;
+    }
+
+    .gallery3 .embed-container{
+        margin-top: 2rem;
+    }
+
+    .gallery3 .flickity-page-dots {
+    bottom: -20px;
+  }
+}
