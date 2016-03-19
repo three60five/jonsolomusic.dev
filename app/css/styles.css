@@ -317,6 +317,10 @@ body {
   height: 8%;
   color: #ffffff; }
 
+#big_play_button {
+  left: 40% !important;
+  bottom: 40% !important; }
+
 @media all and (orientation: portrait) {
   /* disable Flickity for large devices */
   .gallery3:after {

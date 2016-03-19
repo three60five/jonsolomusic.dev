@@ -45,28 +45,28 @@
                     <div id="audio">
                         <ul class="instrument-list">
                             <li>Piano&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/Piano.mp3" type="audio/mpeg" />
                                 </audio>
                             </li>
                             <li>Rhodes&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/Rhodes.mp3" type="audio/mpeg" />
                                 </audio></li>
                             <li>B3&nbsp;Organ&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/HammondB3.mp3" type="audio/mpeg" />
                                 </audio></li>
                             <li>Analog&nbsp;Synths&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/AnalogSynth.mp3" type="audio/mpeg" />
                                 </audio></li>
                             <li>Wurlitzer&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/Wurlitzer.mp3" type="audio/mpeg" />
                                 </audio></li>
                             <li>Guitar&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none">
+                                <audio preload="metadata">
                                     <source src="instruments/Guitar.mp3" type="audio/mpeg" />
                                 </audio></li>
                         </ul>
@@ -171,9 +171,6 @@
           });
         });
 
-
-
-
         var ctrl = document.getElementById('audio').getElementsByTagName('button');
         for(var i = 0; i < ctrl.length; i++){
           ctrl[i].addEventListener('click', function(){
@@ -198,6 +195,12 @@
 
 
     </script>
+    <style type="text/css">
+        #big_play_button {
+            left: 40% !important;
+            bottom: 40% !important;
+        }
+    </style>
 </body>
 
 </html>
