@@ -8,26 +8,6 @@ html, body {
 html {
   -webkit-font-smoothing: antialiased; }
 
-@font-face {
-  font-family: 'Mono Social Icons Font';
-  src: url("../fonts/MonoSocialIconsFont-1.10.eot");
-  src: url("../fonts/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../fonts/MonoSocialIconsFont-1.10.woff") format("woff"), url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
-  src: url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.symbol, a.symbol:before {
-  font-family: 'Mono Social Icons Font';
-  text-rendering: optimizeLegibility;
-  font-smoothing: antialiased; }
-
-a.symbol:before {
-  content: attr(title);
-  font-size: 130%; }
-
-a.symbol:before:nth-last-child(1) {
-  margin-right: 0em; }
-
 #audio button {
   height: 64px;
   width: 64px;
@@ -123,23 +103,56 @@ body {
     background-image: linear-gradient(-135deg, #47565f 0%, #5b625a 15%, #947461 38%, #f98056 70%, #f7ec86 100%);
     opacity: 0.6; }
 
-.jonsolo-text {
-  position: relative;
-  text-align: right;
-  color: white;
-  line-height: 1; }
+.nameplate {
+  margin: 20% 3% 0% 17%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
-.special-links {
-  text-align: right;
-  position: relative; }
-  .special-links li {
-    list-style-type: none;
-    display: inline; }
-    .special-links li a {
-      text-decoration: none;
-      padding: 0em 0 0em 0.3em;
-      text-align: right;
-      color: white; }
+.jonsolo-text {
+  width: 100%;
+  position: relative;
+  color: white;
+  font-size: 16vw;
+  line-height: 1;
+  text-align: right; }
+
+.socialmedia {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.socialicon {
+  position: relative;
+  color: white;
+  width: 100%; }
+
+.svgitem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2rem; }
+
+.svgicon {
+  fill: white; }
+
+.svglink {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .embed-container {
   display: block; }
@@ -258,17 +271,8 @@ body {
   /* disable Flickity for large devices */
   .gallery3:after {
     content: ''; }
-  .band {
-    margin: 25% 3% 0 3%; }
-  .jonsolo-text {
-    font-size: 16vmin; }
   .music-text, .video-text {
     font-size: 5vw; }
-  .special-links {
-    position: relative;
-    float: right; }
-    .special-links li a {
-      font-size: 6.6em; }
   .instrument-list {
     font-size: 11vmin; }
   .swipe {
@@ -291,22 +295,18 @@ body {
     height: 25em; }
   .gallery3 .gallery3-cell {
     height: 25em; }
-  .band {
-    margin: 8% 3% 0% 0%; }
+  .nameplate {
+    margin: 8% 3% 0% 37%; }
+  .socialmedia {
+    margin-top: 1rem; }
   .jonsolo-text {
-    font-size: 8em; }
+    font-size: 12vw; }
   .music-text {
     margin-top: 3rem;
     margin-bottom: -1.5rem; }
   .video-text {
     margin-top: 4rem;
     margin-bottom: -3rem; }
-  .special-links {
-    margin-top: 0rem;
-    position: relative;
-    float: right; }
-    .special-links li a {
-      font-size: 5.4em; }
   .instrument-text {
     font-size: 1.5em; }
   .instrument-list {

@@ -4,7 +4,7 @@ var gulp = require('gulp');
 //Include plugins
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css');
+var minifyCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync');
 var runSequence = require('run-sequence');
 var prefix = require('gulp-autoprefixer');
