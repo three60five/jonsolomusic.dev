@@ -139,7 +139,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  width: 100%; }
 
 .svgicon {
   fill: white; }

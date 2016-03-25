@@ -157,6 +157,7 @@ body {
 .svgitem {
     display: flex;
     margin-left: 2rem;
+    width: 100%;
 }
 
 .svgicon {
@@ -165,9 +166,7 @@ body {
 
 .svglink {
     display: flex;
-    // height: 7vw;
     justify-content: flex-end;
-    // border: 1px solid red;
 }
 
 
