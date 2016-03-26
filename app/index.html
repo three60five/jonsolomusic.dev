@@ -72,22 +72,22 @@
                     <div id="audio">
                         <ul class="instrument-list">
                             <li>Piano&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/Piano.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/Piano.mp3"></audio>
                             </li>
                             <li>Rhodes&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/Rhodes.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/Rhodes.mp3"></audio>
                             </li>
                             <li>B3&nbsp;Organ&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/HammondB3.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/HammondB3.mp3"></audio>
                             </li>
                             <li>Analog&nbsp;Synths&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/AnalogSynth.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/AnalogSynth.mp3"></audio>
                             </li>
                             <li>Wurlitzer&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/Wurlitzer.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/Wurlitzer.mp3"></audio>
                             </li>
                             <li>Guitar&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="none" data-src="instruments/Guitar.mp3"></audio>
+                                <audio preload="meta" data-src="instruments/Guitar.mp3"></audio>
                             </li>
                         </ul>
                     </div>
@@ -198,10 +198,10 @@
           ctrl[i].addEventListener('click', function(){
             var audio = this.nextElementSibling;
             var soundPath = audio.getAttribute('data-src');
+            audio.setAttribute('src', soundPath);
             var pause = this.className === 'pause';
             this.className = pause ? '' : 'pause';
             var method = pause ? 'pause' : 'play';
-            audio.setAttribute('src', soundPath);
             audio[method]();
             audio.addEventListener('ended', function(){
                 this.previousElementSibling.className = '';
