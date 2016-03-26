@@ -198,7 +198,10 @@
           ctrl[i].addEventListener('click', function(){
             var audio = this.nextElementSibling;
             var soundPath = audio.getAttribute('data-src');
-            audio.setAttribute('src', soundPath);
+            var srcPath = audio.getAttribute('src');
+            if (srcPath === null) {
+                audio.setAttribute('src', soundPath);
+            }
             var pause = this.className === 'pause';
             this.className = pause ? '' : 'pause';
             var method = pause ? 'pause' : 'play';
