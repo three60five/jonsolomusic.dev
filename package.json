@@ -4,7 +4,8 @@
   "description": "Website for Jon Solo",
   "main": "index.html",
   "dependencies": {
-    "flickity": "^1.1.2"
+    "flickity": "^1.1.2",
+    "velocity-animate": "^1.2.3"
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",

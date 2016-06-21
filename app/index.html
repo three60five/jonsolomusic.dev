@@ -16,6 +16,10 @@
 
     <link href="css/flickity.min.css" rel="stylesheet" media="screen">
     <link href="css/styles.min.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/velocity.ui.min.js"></script>
+
 </head>
 
 <body>
@@ -26,7 +30,6 @@
             <div class="nameplate">
                 <div class="jonsolo-text">Jon&nbsp;Solo</div>
                 <div class="socialmedia">
-
                     <div class="socialicon">
                         <a class="svglink" href="https://twitter.com/jonsolomusic">
                             <svg class="svgitem" viewBox="0 0 24 24" preserveAspectRatio="xMidYMin">
@@ -147,6 +150,9 @@
         </div>
     </div>
 
+<!--     <script   src="js/jquery.slim.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/velocity.ui.min.js"></script> -->
     <script src="js/flickity.pkgd.min.js"></script>
     <script type="text/javascript">
 
@@ -210,7 +216,27 @@
                 this.previousElementSibling.className = '';
                 }, false);
             }, false);
-        }
+        };
+
+        var $element1 = $(".socialicon").eq(0),
+            $element2 = $(".socialicon").eq(1),
+            $element3 = $(".socialicon").eq(2),
+            $element4 = $(".socialicon").eq(3),
+            $element5 = $(".socialicon").eq(4);
+            $element6 = $(".jonsolo-text");
+
+        var mySequence = [
+            { e: $element6, p: { translateY: 30, opacity: 1 }, o: { duration: 1000, delay: 1000, sequenceQueue: false } },
+            { e: $element1, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 500, sequenceQueue: false } },
+            { e: $element2, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 100, sequenceQueue: false } },
+            { e: $element3, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 150, sequenceQueue: false } },
+            { e: $element4, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 200, sequenceQueue: false } },
+            { e: $element5, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 250, sequenceQueue: false } }
+            
+        ];
+
+        $.Velocity.RunSequence(mySequence);
+
 
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
