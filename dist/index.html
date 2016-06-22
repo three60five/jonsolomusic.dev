@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Jon Solo Music</title>
+  <meta name="description" content="Listen to the latest music from Jon Solo, a Brooklyn-based singer/songwriter.  Buy or download Jon Solo's music and stay up to date by following him on Facebook and Twitter.">
+  <meta name="keywords" content="Jon Solo, Jon Solo Music, solokeys, singer-songwriter, brooklyn, musician, songwriter, brett dennen" />
+  
+    <meta property="og:title" content="Jon Solo Music"/>
+    <meta property="og:type" content="album"/>
+    <meta property="og:url" content="http://jonsolomusic.com/"/>
+    <meta property="og:image" content="http://jonsolomusic.com/img/inmyview_cover.jpg"/>
+    <meta property="og:site_name" content="Jon Solo Music"/>
+    <meta property="fb:admins" content="solokeys"/>
+    <meta property="og:description" content="Listen to the latest music from Jon Solo, a Brooklyn-based singer/songwriter.  Buy or download Jon Solo's music and stay up to date by following him on Facebook and Twitter."/>
+ 
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+   <script type="text/javascript" src="http://use.typekit.com/hgj0nug.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+ 
+</head>
+
+<body>
+
+<div id="container">
+	<div id="main" role="main">
+		
+		<section id="inmyview">		
+			<div class="page" class="clearfix">
+				<div class="cover">
+					<img src="img/inmyview_cover.jpg" alt="In My View by Jon Solo" width="400" height="357" />
+					<div class="buynow"><a href="http://jonsolo.bandcamp.com/album/in-my-view">BUY NOW</a></div>
+				</div>
+				
+				<div class="songs">
+					<div id="jquery_jplayer_1"></div>
+					<div id="jp_container_1" class="demo-container">
+					<p id="inmyview-message">Click a song title<br />to listen now</p>	
+					
+					<p id="inmyview-nowplaying">
+						<span class="track-name">nothing</span>&nbsp;<span class="extra-play-info"></span>
+						<br />
+						<span><a class="jp-play" href="#">Play</a></span>
+						<span><a class="jp-pause" href="#">Pause</a></span> |
+						<span><a class="jp-stop" href="#">Stop</a></span>
+					</p>	
+								
+					<ul class="tracklist">
+						<li><a href="music/inmyview.mp3" class="track track-default">in my view</a></li>
+						<li><a href="music/onelife.mp3" class="track">one life</a></li>
+						<li><a href="music/daringdream.mp3" class="track">daring dream</a></li>
+						<li><a href="music/letsmakemoves.mp3" class="track">let's make moves</a></li>
+						<li><a href="music/yourethecatch.mp3" class="track">you're the catch</a></li>
+						<li><a href="music/seasonsachanging.mp3" class="track">seasons a changing</a></li>
+						<li><a href="music/wealljusttalk.mp3" class="track">we all just talk</a></li>
+						<li><a href="music/youandmemakewe.mp3" class="track">you and me make we</a></li>
+						<li><a href="music/lostyouinthewin.mp3" class="track">lost you in the win</a></li>
+						<li><a href="music/whatsnew.mp3" class="track">what's new</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="extras">
+			<p class="credits">thanks to john alagia, brett dennen, ben moon, david allen, brad conrad, and alison watson.</p>		
+			<p class="followme"><a href="http://www.facebook.com/jonsolomusic" onClick="_gaq.push(['_trackEvent', 'Outgoing', 'Link', 'Facebook']);">facebook</a> &amp; <a href="http://twitter.com/jonsolomusic" onClick="_gaq.push(['_trackEvent', 'Outgoing', 'Link', 'Twitter']);">twitter</a></p>
+		</div>	
+			
+		</section>
+	
+
+				
+
+	</div>
+</div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+ 	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+<!--   <script defer src="js/plugins.js"></script> -->
+  <script defer src="js/script.js"></script>
+ 
+  <!-- end scripts-->
+
+	
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UA-6814184-2'],['_setDomainName', '.jonsolomusic.com'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
