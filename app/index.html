@@ -100,18 +100,18 @@
             <div class="gallery2">
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/CBhwYz7vtiA?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video1" class="video-frame" src="https://www.youtube.com/embed/CBhwYz7vtiA?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video2" class="video-frame" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 
                     </div>
                 </div>
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/pdYbu6v3Pyg?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video3" class="video-frame" src="https://www.youtube.com/embed/pdYbu6v3Pyg?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -225,7 +225,9 @@
         }, true);
 
         $('a, button').click(function() {
-            $(".video-frame")[0].pauseVideo();
+            $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             return true; // return true so that the browser will navigate to the clicked a's href
         });
 
