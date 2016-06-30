@@ -1,0 +1,189 @@
+//Import Font Files
+@import url(https://fonts.googleapis.com/css?family=Nunito|Permanent+Marker);
+
+//Global Styles
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+
+// Flickity Full Screen
+.gallery {
+  background: white;
+  height: 100%;
+}
+
+.gallery-cell {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    background: white;
+    overflow: scroll;
+    border: 0.7em solid white;
+}
+
+.gallery3 {
+    background: transparent;
+    height: 50%;
+    .gallery3-cell {
+        width: 100%;
+        background: transparent;
+        border: none;
+    }
+}
+
+// Disable Flickity on Portrait
+.gallery3:after {
+    content: 'flickity';
+    display: none;
+}
+
+//Flickity Buttons
+.flickity-prev-next-button {
+    background-color: rgba(255,255,255,0.7);
+    width: 120px;
+    height: 120px;
+}
+
+.flickity-prev-next-button.next {
+    right: 7%;
+}
+
+.flickity-prev-next-button.previous {
+    left: 7%;
+}
+
+//Swipe Indicator
+.swipe {
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3vmax;
+    margin: 0 auto;
+    color: black;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.swipe-indicator {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    background-color: rgba(255,255,255,1);
+}
+
+.swipe-off {
+    display: none;
+}
+
+//Swipe Animations
+.vhs-left, .vhs-right {
+    opacity: 0;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+.vhs-left {
+    animation-name: vhs-left;
+    ransform: translateX(-12.5vw);
+}
+.vhs-right {
+    animation-name: vhs-right;
+    transform: translateX(12.5vw);
+}
+
+@keyframes vhs-left {
+   0% { transform: translateX(-12.5vw); opacity: 0; }
+ 100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes vhs-right {
+   0% { transform: translateX(12.5vw); opacity: 0; }
+ 100% { transform: translateX(0); opacity: 1; }
+}
+
+.vhs-reverse { 
+    animation-direction: reverse 
+}
+
+.vhs-delay-3 { animation-delay: 3s }
+.vhs-duration-3 { animation-duration: 3s }
+
+
+
+// Import Slide Styles
+@import 'home_slide';
+@import 'instruments_slide';
+@import 'band_slide';
+@import 'music_slide';
+
+
+
+
+//Media Queries
+@media all and (orientation:portrait) {
+    /* disable Flickity for large devices */
+    .gallery3:after {
+        content: '';
+    }
+
+    .music-text {
+        font-size: 5vw;
+    }
+
+    .swipe {
+        bottom: 30%;
+    }
+
+    .embed-container .musicframe {
+        width: 325px;
+        height: 325px;
+    }
+}
+
+@media all and (orientation:landscape) {
+    .gallery3 .gallery3-cell {
+        height: 25em;
+    }
+
+    .music-text {
+        margin-top: 3rem;
+        margin-bottom: -1.5rem;
+    }
+
+    .swipe {
+        bottom: 18%;
+    }
+
+    .gallery3 .embed-container{
+        margin-top: 2rem;
+    }
+
+    .gallery3 .flickity-page-dots {
+        bottom: -20px;
+    }
+}
+
+
+
+
+
+
+
+

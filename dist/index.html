@@ -20,16 +20,14 @@
 
     <link href="css/flickity.min.css" rel="stylesheet" media="screen">
     <link href="css/styles.min.css" rel="stylesheet" media="screen">
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/velocity.min.js"></script>
-    <script src="js/velocity.ui.min.js"></script>
+
 
 </head>
 
 <body>
 
     <div class="gallery">
-        <div class="swipe vhs-left vhs-delay-6 vhs-duration-6"><span class="swipe-indicator">&laquo;&nbsp;&nbsp;&laquo;&nbsp;&nbsp;flick&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&raquo;</span></div>
+        <div class="swipe vhs-left vhs-delay-3 vhs-duration-3"><span class="swipe-indicator">&laquo;&nbsp;&nbsp;&laquo;&nbsp;&nbsp;flick&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&raquo;</span></div>
         <div class="gallery-cell jonsolo">
             <div class="nameplate">
                 <div class="jonsolo-text">Jon&nbsp;Solo</div>
@@ -75,58 +73,52 @@
         <div class="gallery-cell intro"> 
             <div class="instrument">
                 <div class="instrument-text">Instruments</div>
-                <div class="static-banner">
-                    <div id="audio">
-                        <ul class="instrument-list">
-                            <li>Piano&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/Piano.mp3"></audio>
-                            </li>
-                            <li>Rhodes&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/Rhodes.mp3"></audio>
-                            </li>
-                            <li>B3&nbsp;Organ&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/HammondB3.mp3"></audio>
-                            </li>
-                            <li>Analog&nbsp;Synths&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/AnalogSynth.mp3"></audio>
-                            </li>
-                            <li>Wurlitzer&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/Wurlitzer.mp3"></audio>
-                            </li>
-                            <li>Guitar&nbsp;<button title="Play / Pause"></button>
-                                <audio preload="meta" data-src="instruments/Guitar.mp3"></audio>
-                            </li>
-                        </ul>
+                <div id="audio" class="instrument-list">
+                    <div>Piano&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/Piano.mp3"></audio>
+                    </div>
+                    <div>Rhodes&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/Rhodes.mp3"></audio>
+                    </div>
+                    <div>B3&nbsp;Organ&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/HammondB3.mp3"></audio>
+                    </div>
+                    <div>Analog&nbsp;Synths&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/AnalogSynth.mp3"></audio>
+                    </div>
+                    <div>Wurlitzer&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/Wurlitzer.mp3"></audio>
+                    </div>
+                    <div>Guitar&nbsp;<button title="Play / Pause"></button>
+                        <audio preload="meta" data-src="instruments/Guitar.mp3"></audio>
                     </div>
                 </div>
             </div>
         </div>
         <div class="gallery-cell video">
-            <div class="video-text">Bands</div>
-            <div class "video-grid">
-                <div class="gallery2">
-                    <div class="gallery2-cell">
-                        <div class="embed-container">
-                            <iframe class="videoframe" src="https://www.youtube.com/embed/z-cHjLFit0o?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
+            <div class="band-text">Bands</div>
+            <div class="gallery2">
+                <div class="gallery2-cell">
+                    <div class="video-wrapper">
+                        <iframe class="video-frame" src="https://www.youtube.com/embed/CBhwYz7vtiA?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="gallery2-cell">
-                        <div class="embed-container">
-                            <iframe class="videoframe" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="gallery2-cell">
+                    <div class="video-wrapper">
+                        <iframe class="video-frame" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
 
-                        </div>
                     </div>
-                    <div class="gallery2-cell">
-                        <div class="embed-container">
-                            <iframe class="videoframe" src="https://www.youtube.com/embed/rFOrSwCek5M?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                </div>
+                <div class="gallery2-cell">
+                    <div class="video-wrapper">
+                        <iframe class="video-frame" src="https://www.youtube.com/embed/pdYbu6v3Pyg?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
         <div class="gallery-cell music">
             <div class="music-text">Songwriting</div>
-            <div class "music-grid">
+            <div class="music-grid">
                 <div class="gallery3">
                     <div class="gallery3-cell">
                         <div class="embed-container">
@@ -154,9 +146,9 @@
         </div>
     </div>
 
-<!--     <script   src="js/jquery.slim.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
     <script src="js/velocity.min.js"></script>
-    <script src="js/velocity.ui.min.js"></script> -->
+    <script src="js/velocity.ui.min.js"></script>
     <script src="js/flickity.pkgd.min.js"></script>
     <script type="text/javascript">
 
@@ -195,7 +187,7 @@
           var flkty = Flickity.data( gallery )
           flkty.on( 'dragEnd', function() {
             var swipeClass = document.querySelector('.swipe').classList;
-            swipeClass.remove('vhs-left', 'vhs-delay-6', 'vhs-duration-6');
+            swipeClass.remove('vhs-left', 'vhs-delay-3', 'vhs-duration-3');
             swipeClass.add('vhs-right', 'vhs-reverse');
             setTimeout(function() {
                 swipeClass.add('swipe-off');
@@ -222,6 +214,16 @@
             }, false);
         };
 
+        document.addEventListener('play', function(e){
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target){
+                    audios[i].pause();
+                    audios[i].previousElementSibling.className = '';
+                }
+            }
+        }, true);
+
         var $element1 = $(".socialicon").eq(0),
             $element2 = $(".socialicon").eq(1),
             $element3 = $(".socialicon").eq(2),
@@ -236,7 +238,6 @@
             { e: $element3, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 150, sequenceQueue: false } },
             { e: $element4, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 200, sequenceQueue: false } },
             { e: $element5, p: { translateY: -10, opacity: 1 }, o: { duration: 1000, delay: 250, sequenceQueue: false } }
-            
         ];
 
         $.Velocity.RunSequence(mySequence);
