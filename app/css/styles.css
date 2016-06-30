@@ -265,12 +265,15 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 94%;
   margin-left: 3%; }
 
 .instrument-text {
   font-size: 8vmin;
-  margin-bottom: 3%;
   color: #2364b4;
   position: relative;
   z-index: 1; }
@@ -291,12 +294,12 @@ body {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  height: 90%;
+  height: 80%;
   color: white;
   text-shadow: 0.05em 0.05em 0.01em #2364b4;
   position: relative;
   z-index: 1;
-  font-size: 8vmin; }
+  font-size: 11vmin; }
 
 #audio button {
   height: 8vmin;
