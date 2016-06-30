@@ -265,18 +265,22 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 94%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  height: 90%;
   margin-left: 3%; }
 
 .instrument-text {
   font-size: 8vmin;
   color: #2364b4;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  text-shadow: none; }
 
 .instrument-list {
   display: -webkit-box;
@@ -288,18 +292,15 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  height: 80%;
+  height: 90%;
   color: white;
   text-shadow: 0.05em 0.05em 0.01em #2364b4;
   position: relative;
   z-index: 1;
-  font-size: 11vmin; }
+  font-size: 10vmin; }
 
 #audio button {
   height: 8vmin;
@@ -316,7 +317,17 @@ body {
 
 @media all and (orientation: landscape) {
   .intro {
-    background-image: url(../images/keys_large.jpg); } }
+    background-image: url(../images/keys_large.jpg); }
+  .instrument-text {
+    font-size: 6vmin; }
+  .instrument-list {
+    font-size: 8vmin; } }
+
+@media all and (max-width: 25em), all and (max-height: 28em) {
+  .instrument-text {
+    font-size: 6vmin; }
+  .instrument-list {
+    font-size: 8vmin; } }
 
 .video {
   background: -webkit-linear-gradient(315deg, #6f749e 0%, #9a8daf 31%, #d0a8b9 58%, #f8bbb1 80%, #fde6b1 100%);
