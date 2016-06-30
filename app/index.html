@@ -152,6 +152,7 @@
     <script src="js/flickity.pkgd.min.js"></script>
     <script type="text/javascript">
 
+        //Setup Flickity galleries
         var elem = document.querySelector('.gallery');
         var flkty = new Flickity( elem, {
             "cellSelector": ".gallery-cell",
@@ -181,20 +182,29 @@
             "watchCSS": true
         });
 
+        //Remove flick animation
         document.body.addEventListener( 'touchstart', Function.prototype );
         docReady( function() {
           var gallery = document.querySelector('.gallery')
           var flkty = Flickity.data( gallery )
           flkty.on( 'dragEnd', function() {
+            //Remove flick indicator on swipe
             var swipeClass = document.querySelector('.swipe').classList;
             swipeClass.remove('vhs-left', 'vhs-delay-3', 'vhs-duration-3');
             swipeClass.add('vhs-right', 'vhs-reverse');
             setTimeout(function() {
                 swipeClass.add('swipe-off');
             },1000);
+
+            //Stop videos on swipe
+            $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+
           });
         });
 
+        //Audio player
         var ctrl = document.getElementById('audio').getElementsByTagName('button');
         for(var i = 0; i < ctrl.length; i++){
           ctrl[i].addEventListener('click', function(){
@@ -214,6 +224,7 @@
             }, false);
         };
 
+        //Pause one track if another starts
         document.addEventListener('play', function(e){
             var audios = document.getElementsByTagName('audio');
             for(var i = 0, len = audios.length; i < len;i++){
@@ -224,6 +235,7 @@
             }
         }, true);
 
+        //Stop videos on click of link or button
         $('a, button').click(function() {
             $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
@@ -231,7 +243,7 @@
             return true; // return true so that the browser will navigate to the clicked a's href
         });
 
-
+        //Velocity.js for animated sequence of name and social icons on homeslide
         var $element1 = $(".socialicon").eq(0),
             $element2 = $(".socialicon").eq(1),
             $element3 = $(".socialicon").eq(2),
@@ -250,7 +262,7 @@
 
         $.Velocity.RunSequence(mySequence);
 
-
+        //Google Analytics
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
