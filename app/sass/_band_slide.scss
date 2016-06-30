@@ -97,13 +97,9 @@ $large_video_height: 504px;
     	width: 100%;
     	height: $small_video_height;
     }
-
-    .gallery2 .flickity-page-dots {
-        bottom: -6vmin;
-    }
 }
 
-@media all and (orientation:landscape) and (min-width: 87.5em) {
+@media all and (orientation:landscape) and (min-width: 87.5em) and (min-height: $large_video_height) {
     .gallery2-cell {
 	    width: 100%;
     	max-width: none;
@@ -117,9 +113,5 @@ $large_video_height: 504px;
     .video-frame {
     	width: 100%;
     	height: $large_video_height;
-    }
-
-    .gallery2 .flickity-page-dots {
-        bottom: -6vmin;
     }
 }

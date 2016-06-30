@@ -118,28 +118,26 @@
         </div>
         <div class="gallery-cell music">
             <div class="music-text">Songwriting</div>
-            <div class="music-grid">
-                <div class="gallery3">
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="https://bandcamp.com/EmbeddedPlayer/album=1991196336/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=187987099/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/ornithology">Ornithology by Jon Solo</a>
-                            </iframe>
-                        </div>
+            <div class="gallery3">
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music1" class="music-frame" src="https://bandcamp.com/EmbeddedPlayer/album=1991196336/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=187987099/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/ornithology">Ornithology by Jon Solo</a>
+                        </iframe>
                     </div>
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="https://bandcamp.com/EmbeddedPlayer/album=3303453568/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=33456527/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/in-my-view">In My View by Jon Solo</a>
-                            </iframe>
-                        </div>
+                </div>
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music2" class="music-frame" src="https://bandcamp.com/EmbeddedPlayer/album=3303453568/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=33456527/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/in-my-view">In My View by Jon Solo</a>
+                        </iframe>
                     </div>
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="http://bandcamp.com/EmbeddedPlayer/album=3866575884/size=large/bgcol=ffffff/linkcol=000000/minimal=true/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/jon-solo">Jon Solo by Jon Solo</a>
-                            </iframe>
-                        </div>
+                </div>
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music3" class="music-frame" src="http://bandcamp.com/EmbeddedPlayer/album=3866575884/size=large/bgcol=ffffff/linkcol=000000/minimal=true/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/jon-solo">Jon Solo by Jon Solo</a>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -200,7 +198,6 @@
             $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-
           });
         });
 
@@ -237,9 +234,11 @@
 
         //Stop videos on click of link or button
         $('a, button').click(function() {
+            //Stop videos
             $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+
             return true; // return true so that the browser will navigate to the clicked a's href
         });
 
