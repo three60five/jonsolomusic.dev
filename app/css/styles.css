@@ -512,7 +512,7 @@ body {
   .gallery3:after {
     content: ''; } }
 
-@media all and (orientation: portrait) and (max-height: 65.625em) {
+@media all and (orientation: portrait) and (max-height: 80em) {
   .gallery3-cell {
     width: 100%;
     max-width: none;
