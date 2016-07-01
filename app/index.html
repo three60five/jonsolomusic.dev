@@ -198,6 +198,14 @@
             $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
             $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+
+            //Pause instrument audio on swipe
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                audios[i].pause();
+                audios[i].previousElementSibling.className = '';
+            }
+
           });
         });
 
