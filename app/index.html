@@ -148,6 +148,7 @@
     <script src="js/velocity.min.js"></script>
     <script src="js/velocity.ui.min.js"></script>
     <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/domready.js"></script>
     <script type="text/javascript">
 
         //Setup Flickity galleries
@@ -157,7 +158,8 @@
             "setGallerySize": false,
             "wrapAround":true,
             "pageDots": false,
-            "prevNextButtons": false 
+            "prevNextButtons": false,
+            "dragThreshold": 3
         });
 
         var elem2 = document.querySelector('.gallery2');
@@ -182,7 +184,8 @@
 
         //Remove flick animation
         document.body.addEventListener( 'touchstart', Function.prototype );
-        docReady( function() {
+        
+        DomReady.ready( function() {
           var gallery = document.querySelector('.gallery')
           var flkty = Flickity.data( gallery )
           flkty.on( 'dragEnd', function() {

@@ -72,8 +72,8 @@
         </div>
         <div class="gallery-cell intro"> 
             <div class="instrument">
-                <div class="instrument-text">Instruments</div>
                 <div id="audio" class="instrument-list">
+                    <div class="instrument-text">Instruments</div>
                     <div>Piano&nbsp;<button title="Play / Pause"></button>
                         <audio preload="meta" data-src="instruments/Piano.mp3"></audio>
                     </div>
@@ -100,46 +100,44 @@
             <div class="gallery2">
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/CBhwYz7vtiA?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video1" class="video-frame" src="https://www.youtube.com/embed/CBhwYz7vtiA?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video2" class="video-frame" src="https://www.youtube.com/embed/oeZG4cUw4T0?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 
                     </div>
                 </div>
                 <div class="gallery2-cell">
                     <div class="video-wrapper">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/pdYbu6v3Pyg?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video3" class="video-frame" src="https://www.youtube.com/embed/pdYbu6v3Pyg?rel=0&amp;showinfo=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
         <div class="gallery-cell music">
             <div class="music-text">Songwriting</div>
-            <div class="music-grid">
-                <div class="gallery3">
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="https://bandcamp.com/EmbeddedPlayer/album=1991196336/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=187987099/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/ornithology">Ornithology by Jon Solo</a>
-                            </iframe>
-                        </div>
+            <div class="gallery3">
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music1" class="music-frame" src="https://bandcamp.com/EmbeddedPlayer/album=1991196336/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=187987099/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/ornithology">Ornithology by Jon Solo</a>
+                        </iframe>
                     </div>
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="https://bandcamp.com/EmbeddedPlayer/album=3303453568/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=33456527/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/in-my-view">In My View by Jon Solo</a>
-                            </iframe>
-                        </div>
+                </div>
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music2" class="music-frame" src="https://bandcamp.com/EmbeddedPlayer/album=3303453568/size=large/bgcol=ffffff/linkcol=000000/minimal=true/track=33456527/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/in-my-view">In My View by Jon Solo</a>
+                        </iframe>
                     </div>
-                    <div class="gallery3-cell">
-                        <div class="embed-container">
-                            <iframe class="musicframe" src="http://bandcamp.com/EmbeddedPlayer/album=3866575884/size=large/bgcol=ffffff/linkcol=000000/minimal=true/transparent=true/" seamless>
-                                <a href="http://jonsolo.bandcamp.com/album/jon-solo">Jon Solo by Jon Solo</a>
-                            </iframe>
-                        </div>
+                </div>
+                <div class="gallery3-cell">
+                    <div class="music-wrapper">
+                        <iframe id="music3" class="music-frame" src="http://bandcamp.com/EmbeddedPlayer/album=3866575884/size=large/bgcol=ffffff/linkcol=000000/minimal=true/transparent=true/" seamless>
+                            <a href="http://jonsolo.bandcamp.com/album/jon-solo">Jon Solo by Jon Solo</a>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -150,8 +148,10 @@
     <script src="js/velocity.min.js"></script>
     <script src="js/velocity.ui.min.js"></script>
     <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/domready.js"></script>
     <script type="text/javascript">
 
+        //Setup Flickity galleries
         var elem = document.querySelector('.gallery');
         var flkty = new Flickity( elem, {
             "cellSelector": ".gallery-cell",
@@ -181,20 +181,37 @@
             "watchCSS": true
         });
 
+        //Remove flick animation
         document.body.addEventListener( 'touchstart', Function.prototype );
-        docReady( function() {
+        
+        DomReady.ready( function() {
           var gallery = document.querySelector('.gallery')
           var flkty = Flickity.data( gallery )
           flkty.on( 'dragEnd', function() {
+            //Remove flick indicator on swipe
             var swipeClass = document.querySelector('.swipe').classList;
             swipeClass.remove('vhs-left', 'vhs-delay-3', 'vhs-duration-3');
             swipeClass.add('vhs-right', 'vhs-reverse');
             setTimeout(function() {
                 swipeClass.add('swipe-off');
             },1000);
+
+            //Stop videos on swipe
+            $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+
+            //Pause instrument audio on swipe
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                audios[i].pause();
+                audios[i].previousElementSibling.className = '';
+            }
+
           });
         });
 
+        //Audio player
         var ctrl = document.getElementById('audio').getElementsByTagName('button');
         for(var i = 0; i < ctrl.length; i++){
           ctrl[i].addEventListener('click', function(){
@@ -214,6 +231,7 @@
             }, false);
         };
 
+        //Pause one track if another starts
         document.addEventListener('play', function(e){
             var audios = document.getElementsByTagName('audio');
             for(var i = 0, len = audios.length; i < len;i++){
@@ -224,6 +242,17 @@
             }
         }, true);
 
+        //Stop videos on click of link or button
+        $('a, button').click(function() {
+            //Stop videos
+            $('#video1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $('#video3')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+
+            return true; // return true so that the browser will navigate to the clicked a's href
+        });
+
+        //Velocity.js for animated sequence of name and social icons on homeslide
         var $element1 = $(".socialicon").eq(0),
             $element2 = $(".socialicon").eq(1),
             $element3 = $(".socialicon").eq(2),
@@ -242,7 +271,7 @@
 
         $.Velocity.RunSequence(mySequence);
 
-
+        //Google Analytics
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

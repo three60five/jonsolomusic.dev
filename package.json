@@ -4,7 +4,7 @@
   "description": "Website for Jon Solo",
   "main": "index.html",
   "dependencies": {
-    "flickity": "^1.1.2",
+    "flickity": "^2.0.4",
     "velocity-animate": "^1.2.3"
   },
   "devDependencies": {
@@ -16,7 +16,7 @@
     "gulp-jshint": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
-    "gulp-uglify": "^1.5.1",
+    "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.1.5"
   },
