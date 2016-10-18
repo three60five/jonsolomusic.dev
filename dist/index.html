@@ -150,11 +150,6 @@
     <script src="js/flickity.pkgd.min.js"></script>
     <script type="text/javascript">
 
-        //Fix iOS 10 Scroll
-        document.ontouchmove = function(e){
-            return true;
-        };
-
         //Setup Flickity galleries
         var elem = document.querySelector('.gallery');
         var flkty = new Flickity( elem, {
