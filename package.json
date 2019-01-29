@@ -4,21 +4,21 @@
   "description": "Website for Jon Solo",
   "main": "index.html",
   "dependencies": {
-    "flickity": "^2.0.4",
-    "velocity-animate": "^1.2.3"
+    "flickity": "^2.2.0",
+    "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.10.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.4",
-    "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.1",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
-    "run-sequence": "^1.1.5"
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^2.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
