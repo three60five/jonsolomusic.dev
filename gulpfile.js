@@ -41,8 +41,8 @@ gulp.task('sass', ['sass-compile', 'sass-watch']);
 
 gulp.task('flickity-js', function() {
   return gulp.src('node_modules/flickity/dist/flickity.pkgd.min.js')
-    .pipe(gulp.dest('app/js')) // Outputs it in the css folder
-    .pipe(gulp.dest('dist/js')) // Outputs it in the css folder
+    .pipe(gulp.dest('app/js')) // Outputs it in the js folder
+    .pipe(gulp.dest('dist/js')) // Outputs it in the js folder
 })
 
 gulp.task('flickity-css', function() {
@@ -51,11 +51,23 @@ gulp.task('flickity-css', function() {
     .pipe(gulp.dest('dist/css')) // Outputs it in the css folder
 })
 
+gulp.task('velocity-js', function() {
+  return gulp.src('node_modules/velocity-animate/velocity.min.js')
+    .pipe(gulp.dest('app/js')) // Outputs it in the js folder
+    .pipe(gulp.dest('dist/js')) // Outputs it in the js folder
+})
+
+gulp.task('velocity-ui', function() {
+  return gulp.src('node_modules/velocity-animate/velocity.ui.min.js')
+    .pipe(gulp.dest('app/js')) // Outputs it in the js folder
+    .pipe(gulp.dest('dist/js')) // Outputs it in the js folder
+})
+
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload); 
-  gulp.watch('app/js/**/*.js', browserSync.reload); 
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
   gulp.watch('app/css/*.css', ['sass-watch']);
 })
 
